@@ -22,12 +22,7 @@ require.config({
 require(['IndexTpl'], function (index){
     
     index.template();
-    
-    $('#btn_menu').on('click', function (){        
-         $('#contenedor').load('menu.html');
-    }); 
-    
-        
+            
 });
 
 

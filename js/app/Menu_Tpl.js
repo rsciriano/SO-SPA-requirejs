@@ -3,7 +3,7 @@ define(['MenuCtrl'], function (MenuCtrl){
     
     var menu_page = {
         
-        template_m: function (){
+        template: function (){
             
             var titulo, cuerpo;
             
@@ -12,15 +12,21 @@ define(['MenuCtrl'], function (MenuCtrl){
             
             var html = '<h1>'+ titulo +'</h1>'+
                        '<p>' + cuerpo + '</p>'+
-                       '<button id="btn_index">Ir al index</button>';
+                       '<button data-action="btn_index">Ir al index</button>';
             
             $('#contenedor').html(html);
+            
+            $('button[data-action="btn_index"]').on('click', function (){        
+                require(['IndexTpl'], function(index) {
+                    index.template();  
+                });                            
+            }); 
         }
         
     };
    
     return {
-        template_m: menu_page.template_m
+        template: menu_page.template
     };
     
 });
