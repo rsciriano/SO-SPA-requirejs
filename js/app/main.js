@@ -10,13 +10,7 @@ require.config({
       IndexCtrl: 'app/Index_Ctrl',
       MenuTpl: 'app/Menu_Tpl',
       MenuCtrl: 'app/Menu_Ctrl'
-    },
-    
-    shim: {
-        IndexTpl: ['jquery'],
-        MenuTpl: ['jquery']
-    }
-  
+    }  
 });
 
 require(['IndexTpl'], function (index){

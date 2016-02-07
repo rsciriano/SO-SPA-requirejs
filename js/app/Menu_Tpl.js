@@ -1,5 +1,5 @@
 
-define(['MenuCtrl'], function (MenuCtrl){
+define(['jquery', 'MenuCtrl'], function ($, MenuCtrl){
     
     var menu_page = {
         
